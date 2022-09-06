@@ -1,0 +1,90 @@
+@media screen and (max-width: 499px) {
+    nav > ul.nav__list {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 55px;
+        width: 250px;
+        height: 100vh;
+        background-color: #fff;
+        padding: 30px 20px;
+        font-size: 1.5em;
+        transform: translateX(-500px);
+        transition: all .4s ease-in-out;
+        z-index: 5;
+    }
+    nav > ul.nav__list.active {
+        display: block;
+        transform: translateX(0);
+    }
+    .nav__list > .nav__items > a {
+        margin: 20px 0;
+        text-align: right;
+        padding-right: 40px;
+        width: 133px !important;
+    }
+    nav > button {
+        display: block;
+        border: none;
+        background-color: transparent;
+        right: 20px;
+        position: absolute;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 549px) {
+    .restaurant__card {
+        width: 290px;
+        height: 330px;
+    }
+    .restaurant__card > .card__img {
+        width: 60%;
+        height: 53%;
+        left: 22%;
+    }
+    footer > .footer__desc {
+        display: flex;
+        flex-direction: column-reverse;
+        color: rgba(255, 255, 255, 0.85);
+    }
+    footer > .footer__logo {
+        text-align: center;
+    }
+    ul.footer__copyright {
+        width: 100%;
+        justify-content: center;
+    }
+    ul.footer__copyright > li {
+        margin: 0 5px;
+    }
+    ul.footer__sosmed {
+        margin: 10px auto;
+    }    
+}
+@media screen and (max-width: 384px){
+    ul.footer__copyright > li {
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .jumbotron > .jumbotron__title {
+        left: .8em;
+    }
+    .restauran__title {
+        font-size: 1em;
+    }
+    .restaurant__card {
+        width: 225px;
+        height: 270px;
+    }
+    
+    .restaurant__card > .card__img {
+        width: 60%;
+        height: 50%;
+    }
+    .footer__desc > .footer__copyright {
+        font-size: .8em;
+    }
+}
