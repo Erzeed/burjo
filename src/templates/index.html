@@ -4,69 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png"  href="images/favicon.ico">
+    <link rel="icon" type="image/png"  href="../public/images/favicon.ico">
     <title>Burjo|Find Your Restauran</title>
   </head>
   <body id="Home">
     <a href="#content" class="skip-link">Menuju ke konten</a>
-    <nav>
-        <div class="nav__logo">
-          <img src="images/logo.png" alt="">
-        </div>
-        <button aria-label="button navigasi">
-          <img class="open" src="https://img.icons8.com/external-febrian-hidayat-glyph-febrian-hidayat/24/000000/external-burger-bar-ui-essential-febrian-hidayat-glyph-febrian-hidayat.png" alt="open bar button">
-        </button>
-        <ul class="nav__list">
-          <li class="nav__items" ><a href="#Home">Home</a></li>
-          <li class="nav__items" ><a href="#">Favorite</a></li>
-          <li class="nav__items" ><a href="https://github.com/erzeed" target="_blank">About Us</a></li>
-        </ul>
-    </nav>
-    <div class="jumbotron">
-      <div class="jumbotron__title">
-        <h1 tabindex="0">Burjo</h1>
-        <p tabindex="0">It's not just restaurant, It's an Experience</p>
-      </div>
-      <div class="jumbotron__img">
-        <img src="images/heros/hero-image_2.jpg" alt="gambar jumbotron">
-      </div>
-    </div>
-    <main>
-      <section id="content" class="restauran">
-        <div class="restauran__title">
-          <h2 tabindex="0">Explore Restauran</h2>
-        </div>
-        <div class="restauran__container">
-            
-        </div>
-      </section>
-      <section tabindex="0" aria-label="text bergerak It's not just restaurant, It's an Experience . " class="txtslider">
-        <div class="txtslider_slider1">
-          <h3>It's not just restaurant, It's an Experience .</h3>
-        </div>
-        <div class="txtslider_slider1 txtslider_slider2">
-          <h4>It's not just restaurant, It's an Experience .</h4>
-        </div>
-      </section>
-    </main>
+    <nav-bar></nav-bar>
+    <load-ding></load-ding>
+    <main id="mainContent"></main>
     <footer>
-      <div class="footer__logo">
-        <h5 tabindex="0">Burjo</h5>
-        <p tabindex="0">It's not just restaurant, It's an Experience</p>
-      </div>
-      <div class="footer__desc">
-        <ul tabindex="0" class="footer__copyright">
-          <li>© 2022 Burjo</li>
-          <li>Terms of Service</li>
-          <li>Privacy Policy</li>
-        </ul>
-        <ul class="footer__sosmed">
-          <li tabindex="0"><img src="https://img.icons8.com/cute-clipart/64/000000/facebook-new.png" alt="icon facebook"></li>
-          <li tabindex="0"><img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" alt="icon instagram"></li>
-          <li tabindex="0"><img src="https://img.icons8.com/arcade/64/000000/experimental-twitter-arcade.png" alt="icon twitter"></li>
-          <li tabindex="0"><img src="https://img.icons8.com/fluency/48/000000/linkedin.png" alt="icon linkedin"></li>
-        </ul>
-      </div>
+      <footer-element></footer-element>
     </footer>
   </body>
 </html>

@@ -1,0 +1,36 @@
+@import url("../../../../styles/main.css");
+@import url("../../../../styles/responsive.css");
+
+.footer__logo > h5 {
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 700;
+  font-size: 10em !important;
+  margin-bottom: 10px;
+}
+
+.footer__desc {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+ul.footer__copyright,
+ul.footer__sosmed {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul.footer__copyright {
+  width: 300px;
+}
+
+ul.footer__sosmed {
+  width: 150px;
+}
+
+ul.footer__sosmed > li > img {
+  width: 30px;
+  height: 30px;
+}

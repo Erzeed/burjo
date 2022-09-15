@@ -6,7 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/scripts/index.js'),
+    app: path.resolve(__dirname, './src/app.js'),
     // sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   },
   output: {
@@ -17,19 +17,29 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-        ],
+        test: /\.css$/i,
+        exclude: /styles/,
+        use: ['to-string-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: ['file-loader'],
+        test: /\.css$/i,
+        include: /styles/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(jpg|png|svg|gif)$/,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.html$/i,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              minimize: true,
+            },
+          },
+        ],
       },
     ],
   },

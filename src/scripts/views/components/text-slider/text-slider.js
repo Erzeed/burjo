@@ -1,25 +1,24 @@
 /* eslint-disable require-jsdoc */
-import css from './navbar.css';
-import html from './navbarElement.js';
+import css from './text-slider.css';
+import html from './text-slider-element';
 
-class navbar extends HTMLElement {
+class textSlider extends HTMLElement {
   constructor() {
     super();
     this.shadowDOM = this.attachShadow({mode: 'open'});
-  }
+  };
   connectedCallback() {
     this.render();
-  }
+  };
 
   render() {
     this.shadowDOM.innerHTML = `
         <style>
             ${css}
         </style>
-          ${html()}
-    `;
-  }
-}
+            ${html()}
+        `;
+  };
+};
 
-
-customElements.define('nav-bar', navbar);
+customElements.define('text-slider', textSlider);

@@ -1,8 +1,8 @@
 /* eslint-disable require-jsdoc */
-import css from './navbar.css';
-import html from './navbarElement.js';
+import css from './loading.css';
+import html from './loading-element';
 
-class navbar extends HTMLElement {
+class loading extends HTMLElement {
   constructor() {
     super();
     this.shadowDOM = this.attachShadow({mode: 'open'});
@@ -16,10 +16,9 @@ class navbar extends HTMLElement {
         <style>
             ${css}
         </style>
-          ${html()}
+            ${html()}
     `;
   }
 }
 
-
-customElements.define('nav-bar', navbar);
+customElements.define('load-ding', loading);

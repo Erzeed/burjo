@@ -1,0 +1,180 @@
+/* @import url('../../../../styles/main.css'); */
+/* @import url('../../../../styles/responsive.css'); */
+
+
+.detail__page {
+    width: 90%;
+    margin: 40px auto;
+    /* background-color: aqua; */
+}
+
+.detail__page__restaurant {
+    display: flex;
+    width: 100%;
+}
+
+.detail__page___img {
+    display: flex;
+    padding: 15px 0;
+    justify-content: center;
+    width: 25%;
+}
+
+.detail__page___img > img {
+    width: 90%;
+    height: 50%;
+    border-radius: 3%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+    object-fit: cover;
+    object-position: center;
+}
+
+.detail__page__desc {
+    padding: 10px;
+    width: 50%;
+}
+
+.detail__page__desc > .page__desc__title > h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, .90);
+    margin-bottom: 5px;
+}
+
+.detail__desc__rate__addres,
+.detail__desc__rate__addres > .desc__addres {
+    display: flex;
+    font-size: .8rem;
+    color: rgba(0, 0, 0, .7);
+}
+
+.page__desc__restaurant {
+    margin: 15px 0;
+    line-height: 1.6em;
+    text-align: left;
+    letter-spacing: .6px;
+    color: rgba(0, 0, 0, .80);
+    font-size: 1.05em;
+}
+
+.page__desc__category {
+    display: flex;
+    font-style: italic;
+    font-size: .8rem;
+    color: rgba(0, 0, 0, .7 );
+}
+
+.page__desc__category > p {
+    margin-right: 5px;
+}
+
+.detail__desc__rate__addres > .desc__addres > p {
+    margin-left: 10px;
+}
+
+.detail__page__menu {
+    width: 25%;
+    border-radius: 10px;
+}
+
+.page__menu__foods > h2,
+.page__menu__drink > h3 {
+    padding: 5px;
+    color: #fff;
+    font-size: 1.5em;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(83,173,39);
+}
+
+.page__menu__drink > h3 {
+    margin-top: 10px;
+}
+
+.page__menu__foods > ol > li,
+.page__menu__drink > ol > li {
+    padding: 5px;
+    margin-left: 15px;
+    color: rgba(0, 0, 0, .75);
+}
+.page__menu__foods > ol ,
+.page__menu__drink > ol  {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 7px;
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, .1);
+}
+
+
+/* review */
+.detail__page__review {
+    margin: 30px 0;
+    padding: 10px;
+}
+
+.detail__page__review > .page__review__form {
+    background-color: #f7f7f7;
+    min-height: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, .05); */
+}
+
+.page__review__form > .review__form__title > h4 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.review__form__content {
+    background-color: #fff;
+    margin: 10px 0;
+    height: 80%;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.review__form__content > #txt___area,
+.review__form__content > #txt___name {
+    width: 100%;
+    height: 50%;
+    font-size: 1.2em;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.review__form__content > .form__content__btn {
+    margin: 10px 0;
+    display: flex;
+    justify-content: end;
+}
+
+.form__content__btn > button {
+    width: 70px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(83,173,39);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, .1);
+    transition: all 0.1s;
+}
+
+.form__content__btn > button:active {
+    transform: translate(3px,3px);
+    box-shadow: none;
+}
+
+.detail__page__review > .page__review__card {
+    margin: 15px 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+}
+
+
+
+
+

@@ -1,0 +1,38 @@
+@import url("../../../../styles/main.css");
+@import url("../../../../styles/responsive.css");
+
+.jumbotron {
+  height: 60vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.jumbotron > .jumbotron__title {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 5em;
+  display: flex;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jumbotron__title > h1 {
+  font-family: "Qwitcher Grypen", cursive;
+  font-weight: 700;
+  font-size: 10em !important;
+}
+
+.jumbotron > .jumbotron__img {
+  height: 100%;
+  width: 100%;
+}
+
+.jumbotron__img > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
