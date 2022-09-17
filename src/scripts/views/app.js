@@ -1,17 +1,15 @@
 /* eslint-disable require-jsdoc */
 import DrawerInitiator from '../utils/drawer-initiator';
-import LoadingInitiator from '../utils/loading-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
 
 class App {
   constructor(
-      {button, drawer, content, iconBar, loading, card}) {
+      {button, drawer, content, iconBar}) {
     this._button = button;
     this._drawer = drawer;
     this._content = content;
     this._iconBar = iconBar;
-    this._loading = loading;
 
     this._initialAppShell();
   }
@@ -22,9 +20,6 @@ class App {
       drawer: this._drawer,
       content: this._content,
       iconBar: this._iconBar,
-    });
-    LoadingInitiator.init({
-      loading: this._loading,
     });
   };
 
