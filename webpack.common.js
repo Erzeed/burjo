@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 module.exports = {
   entry: {
@@ -55,6 +56,23 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
+    }),
+    new WebpackPwaManifest({
+      id: 'burjo-restaurant-catalogue',
+      name: 'Burjo',
+      short_name: 'Burjo',
+      description: 'web app explore restaurant',
+      background_color: '#ffffff',
+      crossorigin: null,
+      publicPath: '/',
+      filename: 'app.manifest.json',
+      start_url: './index.html',
+      icons: [
+        {
+          src: path.resolve('src/public/images/logo.png'),
+          sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
+        },
+      ],
     }),
     new CopyWebpackPlugin({
       patterns: [
