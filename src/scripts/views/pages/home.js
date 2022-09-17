@@ -1,17 +1,17 @@
 import dataRestaurant from '../../data/data-restaurant';
 import card from '../components/card/card-elemen.js';
+import loadingInitiator from '../../utils/loading-initiator';
 
 const home = {
   async render() {
     return `
         <jumbo-tron></jumbo-tron>
+        <load-ding></load-ding>
         <section id="content" class="restauran">
           <div class="restauran__title">
               <h2 tabindex="0">Explore Restauran</h2>
           </div>
-          <div class="restauran__container">
-              
-          </div>
+          <div class="restauran__container"></div>
         </section> 
         <text-slider></text-slider>  
         `;
@@ -22,6 +22,7 @@ const home = {
     movieList.forEach((movie) => {
       cardContainer.innerHTML += card(movie);
     });
+    loadingInitiator(movieList);
   },
 };
 

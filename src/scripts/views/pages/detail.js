@@ -3,10 +3,12 @@ import dataRestaurant from '../../data/data-restaurant';
 import UrlParser from '../../routes/url-parser';
 import detail from '../components/detail/detail';
 import {onHandleForm, onHandleListFood} from '../../utils/detail-initiator';
+import loadingInitiator from '../../utils/loading-initiator';
 
 const detailRestaurant = {
   async render() {
     return `
+       <load-ding></load-ding>
         <section class="detail__restauran">
           <div class="restauran__container"></div>
         </section> 
@@ -18,9 +20,7 @@ const detailRestaurant = {
     const movieDetail = await dataRestaurant.detailRestaurant(url.id);
     const cardContainer = document.querySelector('.restauran__container');
     cardContainer.innerHTML = detail(movieDetail);
-    // const nameSelector = document.querySelector('form input');
-    // const reviewSelector = document.querySelector('form textarea');
-    // const btnForm = document.querySelector('.form__content__btn button');
+    loadingInitiator(movieDetail);
     onHandleListFood(movieDetail);
     onHandleForm();
   },
