@@ -46,7 +46,7 @@ section.restauran {
 }
 
 .restaurant__card > .card__desc {
-  margin-top: 50%;
+  margin-top: 40%;
   color: rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
@@ -72,4 +72,9 @@ section.restauran {
 .card__desc > .card__name > p > a {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.85);
+  min-width: 45px;
+  display: block;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
 }

@@ -6,7 +6,7 @@ const favorite = {
   async render() {
     return `
         <load-ding></load-ding>
-        <section id="content" class="favorite">
+        <section tabindex="0" id="content" class="favorite">
         <div class="restauran__title">
               <h1 tabindex="0">Favorite Restauran</h1>
           </div>

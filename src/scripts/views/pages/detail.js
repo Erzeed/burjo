@@ -11,7 +11,7 @@ const detailRestaurant = {
   async render() {
     return `
        <load-ding></load-ding>
-        <section class="detail__restauran">
+        <section tabindex="0" id="content" class="detail__restauran">
           <div class="restauran__container"></div>
         </section> 
         <text-slider></text-slider>  
