@@ -1,6 +1,6 @@
 
 const detailCategory = (data) => {
-  return `<p>${data}</p>`;
+  return `<p tabindex="0">${data}</p>`;
 };
 
 export default detailCategory;

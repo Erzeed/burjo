@@ -1,6 +1,6 @@
 
 const daftarMenu = (data) => {
-  return `<li>${data}</li>`;
+  return `<li tabindex="0">${data}</li>`;
 };
 
 export default daftarMenu;

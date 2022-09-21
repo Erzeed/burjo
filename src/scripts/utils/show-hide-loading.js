@@ -1,5 +1,5 @@
 
-const loadingInitiator = (data) => {
+const showHideLoading = (data) => {
   const loading = document.querySelector('load-ding')
       .shadowRoot.querySelector('.page__loading');
 
@@ -8,4 +8,4 @@ const loadingInitiator = (data) => {
   }
 };
 
-export default loadingInitiator;
+export default showHideLoading;

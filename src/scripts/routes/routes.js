@@ -1,14 +1,12 @@
 import home from '../views/pages/home';
-// import Upcoming from '../view/pages/upcoming';
+import favorite from '../views/pages/favorite';
 import Detail from '../views/pages/detail';
-// import Like from '../view/pages/like';
 
 const routes = {
-  '/': home, // default page
+  '/': home,
   '/home': home,
-  //   '/upcoming': Upcoming,
+  '/favorite': favorite,
   '/detail/:id': Detail,
-//   '/like': Like,
 };
 
 export default routes;

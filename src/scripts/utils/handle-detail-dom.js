@@ -40,22 +40,21 @@ export const onHandleListFood = async (movieDetail) => {
 
 
 export const onHandleForm = () => {
-  asyncDom('form input').then((element) => {
-    element.addEventListener('change', (e) => {
-      data.name = e.target.value;
-    });
-  });
-  asyncDom('form textarea').then((element) => {
-    element.addEventListener('change', (e) => {
-      data.review = e.target.value;
-    });
-  });
-  asyncDom('.form__content__btn button').then((element) => {
-    element.addEventListener('click', (_) => {
-      const url = UrlParser.parseActiveUrlWithoutCombiner();
-      data.id = url.id;
-      dataRestaurant.postDataReview(data);
-    });
+  asyncDom('for-m').then((element) => {
+    element.shadowRoot.querySelector('.form__content__btn button')
+        .addEventListener('click', (_) => {
+          const url = UrlParser.parseActiveUrlWithoutCombiner();
+          data.id = url.id;
+          dataRestaurant.postDataReview(data);
+        });
+    element.shadowRoot.querySelector('form textarea')
+        .addEventListener('change', (e) => {
+          data.review = e.target.value;
+        });
+    element.shadowRoot.querySelector('form input')
+        .addEventListener('change', (e) => {
+          data.name = e.target.value;
+        });
   });
 };
 

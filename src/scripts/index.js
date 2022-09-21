@@ -4,6 +4,7 @@ import './views/components/jumbotron/jumbotron';
 import './views/components/footer/footer';
 import './views/components/text-slider/text-slider';
 import './views/components/loading/loading';
+import './views/components/form/form';
 import './data/data-restaurant';
 import swRegister from './utils/sw-register';
 import App from './views/app';
@@ -23,13 +24,7 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', async () => {
   app.renderPage();
-  swRegister();
-  // WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
-
-  // FooterToolsInitiator.init({
-  //   subscribeButton: document.querySelector('#subscribePushNotification'),
-  //   unsubscribeButton: document.querySelector('#unsubscribePushNotification'),
-  // });
+  await swRegister();
 });
 
 export default app;

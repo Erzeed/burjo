@@ -34,8 +34,6 @@ class dataRestaurant {
   }
   static async postDataReview(data) {
     const header = {'Content-Type': 'application/json'};
-    // const reloadPage = window.location.reload();
-    console.log(data);
     axios.post(API_ENDPOINT.POST_REVIEW_RESTAURANT, data, {header})
         .then(() => {
           succes();

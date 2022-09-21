@@ -1,6 +1,6 @@
 import dataRestaurant from '../../data/data-restaurant';
 import card from '../components/card/card-elemen.js';
-import loadingInitiator from '../../utils/loading-initiator';
+import showHideLoading from '../../utils/show-hide-loading';
 
 const home = {
   async render() {
@@ -22,7 +22,7 @@ const home = {
     movieList.forEach((movie) => {
       cardContainer.innerHTML += card(movie);
     });
-    loadingInitiator(movieList);
+    showHideLoading(movieList);
   },
 };
 

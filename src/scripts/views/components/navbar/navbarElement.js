@@ -12,8 +12,8 @@ const navbarElement = () => {
         <img class="open" src='${urlLogo}'>
         </button>
         <ul class="nav__list">
-        <li class="nav__items" ><a href="#Home">Home</a></li>
-        <li class="nav__items" ><a href="#">Favorite</a></li>
+        <li class="nav__items" ><a href="/#/home">Home</a></li>
+        <li class="nav__items" ><a href="/#/favorite">Favorite</a></li>
         <li class="nav__items" ><a href="https://github.com/erzeed" target="_blank">About Us</a></li>
         </ul>
     </nav>

@@ -3,6 +3,7 @@
 /* eslint-disable max-len */
 import css from './detail.css';
 import CONFIG from '../../../global/api-endpoint';
+import iconLike from '../../../../public/images/icons8-like.png';
 
 const detail = (data) => {
       return `
@@ -12,52 +13,44 @@ const detail = (data) => {
       <div class="detail__page">
         <div class="detail__page__restaurant">
             <div class="detail__page___img">
-                <img src="${CONFIG.IMG_RESTAURANT(data.pictureId)}" alt="${data.name}" />
+                <img tabindex="0" src="${CONFIG.IMG_RESTAURANT(data.pictureId)}" alt="${data.name}" />
+                <button class="likebtn">
+                    <img src="${iconLike}" alt="button like" />
+                </button>
             </div>
             <div class="detail__page__desc">
                 <div class="page__desc__title">
-                    <h1>${data.name}</h1>
+                    <h1 tabindex="0">${data.name}</h1>
                 </div>
                 <div class="detail__desc__rate__addres">
                     <div class="desc__rate">
-                        <p>${data.rating}</p>
+                        <p tabindex="0">${data.rating}</p>
                     </div>
                     <div class="desc__addres">
-                        <p>${data.city}</p>
-                        <p>${data.address}</p>
+                        <p tabindex="0">${data.city}</p>
+                        <p tabindex="0">${data.address}</p>
                     </div>
                 </div>
                 <div class="page__desc__restaurant">
-                    <p>${data.description}</p>
+                    <p tabindex="0">${data.description}</p>
                 </div>
                 <div class="page__desc__category">
-                   <p>Category :</p>
+                   <p tabindex="0">Category :</p>
                 </div>
             </div>
             <div class="detail__page__menu">
                 <div class="page__menu__foods">
-                    <h2>Menu</h2>
+                    <h2 tabindex="0">Menu</h2>
                     <ol class="menu__foods__daftar"></ol>
                 </div>
                 <div class="page__menu__drink">
-                    <h3>Drink</h3>
+                    <h3 tabindex="0">Drink</h3>
                     <ol class="menu__foods__drink"></ol>
                 </div>
             </div>
         </div>
         <div class="detail__page__review">
-            <div class="page__review__form">
-                <div class="review__form__title">
-                    <h4>Review</h4>
-                </div>
-                <form action="#" class="review__form__content">
-                    <input type="text" placeholder="Nama" id="txt___name" />
-                    <textarea name="txt___area" id="txt___area" placeholder="Review" ></textarea>
-                    <div class="form__content__btn">
-                        <button type="button">Kirim</button>
-                    </div>
-                </form>
-            </div>
+            <for-m></for-m>
             <div class="page__review__card"></div>
         </div>
       </div>
