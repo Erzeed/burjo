@@ -1,6 +1,7 @@
+/* eslint-disable max-len */
 // Karma configuration
 // Generated on Fri Jul 03 2020 20:15:52 GMT+0700 (Western Indonesia Time)
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -31,6 +32,17 @@ module.exports = function (config) {
       // webpack configuration
       devtool: 'inline-source-map',
       mode: 'development',
+      module: {
+        rules: [{
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
+            {
+              loader: 'file-loader',
+            },
+          ],
+        },
+        ],
+      },
     },
 
     webpackMiddleware: {
