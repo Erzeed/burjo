@@ -3,7 +3,6 @@
 /* eslint-disable max-len */
 import css from './detail.css';
 import CONFIG from '../../../global/api-endpoint';
-import iconLike from '../../../../public/images/icons8-like.png';
 
 const detail = (data) => {
       return `
@@ -12,11 +11,8 @@ const detail = (data) => {
       </style>
       <div class="detail__page">
         <div class="detail__page__restaurant">
-            <div class="detail__page___img">
+            <div class="detail__page___img" id="likeButtonContainer">
                 <img tabindex="0" src="${CONFIG.IMG_RESTAURANT(data.pictureId)}" alt="${data.name}" />
-                <button class="likebtn">
-                    <img src="${iconLike}" alt="button like" />
-                </button>
             </div>
             <div class="detail__page__desc">
                 <div class="page__desc__title">

@@ -1,4 +1,4 @@
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2/dist/sweetalert2.all.min.js';
 
 const customToast = Swal.mixin({
   toast: true,

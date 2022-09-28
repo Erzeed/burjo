@@ -31,7 +31,7 @@
   width: 100%;
 }
 
-.jumbotron__img > img {
+.jumbotron__img > picture > img {
   height: 100%;
   width: 100%;
   object-fit: cover;

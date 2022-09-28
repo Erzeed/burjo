@@ -1,5 +1,3 @@
-/* @import url("../../../../styles/main.css"); */
-/* @import url("../../../../styles/responsive.css"); */
 
 .page__loading {
     top: 0;
@@ -33,7 +31,7 @@
     object-fit: contain;
 }
 
-.loading__main__gif > img {
+.loading__main__gif > video {
     position: relative;
     top: -35px;
     width: 40px;

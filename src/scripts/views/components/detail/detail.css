@@ -30,26 +30,6 @@
     object-position: center;
 }
 
-.detail__page___img > button {
-    position: absolute;
-    height: 45px;
-    width: 45px;
-    bottom: 20px;
-    right: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.detail__page___img > button.like {
-    background-color:#53AD27;
-}
-
-.detail__page___img > button > img {
-    height: 50%;
-    width: 50%;
-    object-fit: fill;
-}
-
 .detail__page__desc {
     padding: 10px;
     width: 50%;

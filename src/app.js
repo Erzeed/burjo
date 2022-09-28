@@ -1,4 +1,4 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
 import './styles/responsive.css';
 import './styles/main.css';
 import app from './scripts/index.js';

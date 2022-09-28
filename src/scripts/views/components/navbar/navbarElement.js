@@ -6,10 +6,10 @@ const navbarElement = () => {
   return `
     <nav>
         <div class="nav__logo">
-            <img src='${logo}' alt='logo burjo'>
+        <img src='${logo}' alt='logo burjo'>
         </div>
         <button id="hamburgerButton" aria-label="button navigasi">
-        <img class="open" src='${urlLogo}'>
+        <img class="open" src='${urlLogo}' alt="hamburger button">
         </button>
         <ul class="nav__list">
         <li class="nav__items" ><a href="/#/home">Home</a></li>

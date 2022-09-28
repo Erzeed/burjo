@@ -1,6 +1,8 @@
 /* eslint-disable new-cap */
 /* eslint-disable max-len */
 import CONFIG from '../../../global/api-endpoint';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import css from './card.css';
 
 const card = (data) => {
@@ -14,7 +16,7 @@ const card = (data) => {
     </style>
     <div class="restaurant__card">
         <div class="card__img">
-            <img tabindex="0" src="${CONFIG.IMG_RESTAURANT(data.pictureId)}" alt="restoran bernama${data.name}">
+            <img class="lazyload" tabindex="0" data-src="${CONFIG.IMG_RESTAURANT(data.pictureId)}" alt="restoran bernama${data.name}">
         </div>
         <div class="card__desc">
             <div class="card__name">
