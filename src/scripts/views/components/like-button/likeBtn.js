@@ -5,13 +5,10 @@ const favoriteButton = () => {
   return `
       <style>
       button {
-        position: absolute;
-        height: 45px;
-        width: 45px;
-        bottom: 20px;
-        right: 10px;
-        cursor: pointer;
-        border-radius: 50%;
+          height: 45px;
+          width: 45px;
+          cursor: pointer;
+          border-radius: 50%;
         }
 
         button.like {

@@ -11,8 +11,9 @@ const detail = (data) => {
       </style>
       <div class="detail__page">
         <div class="detail__page__restaurant">
-            <div class="detail__page___img" id="likeButtonContainer">
+            <div class="detail__page___img">
                 <img tabindex="0" src="${CONFIG.IMG_RESTAURANT(data.pictureId)}" alt="${data.name}" />
+                <div id="likeButtonContainer"></div>
             </div>
             <div class="detail__page__desc">
                 <div class="page__desc__title">

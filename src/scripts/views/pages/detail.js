@@ -5,6 +5,7 @@ import detail from '../components/detail/detail';
 import {onHandleForm, onHandleListFood} from '../../utils/handle-detail-dom';
 import showHideLoading from '../../utils/show-hide-loading';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
+import FavoriteRestaurantIdb from '../../data/favorite-restaurant';
 
 const detailRestaurant = {
   async render() {
@@ -18,21 +19,22 @@ const detailRestaurant = {
   },
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const movieDetail = await dataRestaurant.detailRestaurant(url.id);
+    const restaurantDetail = await dataRestaurant.detailRestaurant(url.id);
     const cardContainer = document.querySelector('.restauran__container');
-    cardContainer.innerHTML = detail(movieDetail);
-    showHideLoading(movieDetail);
-    onHandleListFood(movieDetail);
+    cardContainer.innerHTML = detail(restaurantDetail);
+    showHideLoading(restaurantDetail);
+    onHandleListFood(restaurantDetail);
     onHandleForm();
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
-      movie: {
-        id: movieDetail.id,
-        pictureId: movieDetail.pictureId,
-        name: movieDetail.name,
-        description: movieDetail.description,
-        rating: movieDetail.rating,
-        city: movieDetail.city,
+      favoriteRestaurants: FavoriteRestaurantIdb,
+      restaurant: {
+        id: restaurantDetail.id,
+        pictureId: restaurantDetail.pictureId,
+        name: restaurantDetail.name,
+        description: restaurantDetail.description,
+        rating: restaurantDetail.rating,
+        city: restaurantDetail.city,
       },
     });
   },

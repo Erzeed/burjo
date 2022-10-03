@@ -1,19 +1,19 @@
 /* eslint-disable max-len */
-import FavoriteMovieIdb from '../data/favorite-restaurant';
 import favoriteButton from '../views/components/like-button/likeBtn';
 
 const LikeButtonInitiator = {
-  async init({likeButtonContainer, movie}) {
+  async init({likeButtonContainer, favoriteRestaurants, restaurant}) {
     this._likeButtonContainer = likeButtonContainer;
-    this._movie = movie;
+    this._restaurant = restaurant;
+    this._favoriteRestaurants = favoriteRestaurants;
 
     await this._renderButton();
   },
 
   async _renderButton() {
-    const {id} = this._movie;
+    const {id} = this._restaurant;
     this._checkIsLiked(id);
-    if (await this._isMovieExist(id)) {
+    if (await this._isRestaurantExist(id)) {
       this._renderLiked();
     } else {
       this._renderLike();
@@ -21,26 +21,26 @@ const LikeButtonInitiator = {
   },
 
   async _checkIsLiked(id) {
-    this._likeButtonContainer.innerHTML += favoriteButton();
-    const movieList = await FavoriteMovieIdb.getAllMovies();
+    this._likeButtonContainer.innerHTML = favoriteButton();
+    const restaurantsList = await this._favoriteRestaurants.getAllRestaurants();
     const likeButton = document.querySelector('.likebtn');
-    movieList.forEach((data) => {
+    restaurantsList.forEach((data) => {
       if (data.id == id) {
         likeButton.classList.add('like');
       }
     });
   },
 
-  async _isMovieExist(id) {
-    const movie = await FavoriteMovieIdb.getMovie(id);
-    return !!movie;
+  async _isRestaurantExist(id) {
+    const restaurant = await this._favoriteRestaurants.getRestaurants(id);
+    return !!restaurant;
   },
 
   _renderLike() {
     const likeButton = document.querySelector('.likebtn');
     likeButton.addEventListener('click', async () => {
       likeButton.classList.add('like');
-      await FavoriteMovieIdb.putMovie(this._movie);
+      await this._favoriteRestaurants.putRestaurants(this._restaurant);
       this._renderButton();
     });
   },
@@ -49,7 +49,7 @@ const LikeButtonInitiator = {
     const unLikeButton = document.querySelector('.likebtn');
     unLikeButton.addEventListener('click', async () => {
       unLikeButton.classList.remove('like');
-      await FavoriteMovieIdb.deleteMovie(this._movie.id);
+      await this._favoriteRestaurants.deleteRestaurants(this._restaurant.id);
       this._renderButton();
     });
   },

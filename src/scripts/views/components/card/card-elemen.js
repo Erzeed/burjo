@@ -20,7 +20,7 @@ const card = (data) => {
         </div>
         <div class="card__desc">
             <div class="card__name">
-                <p tabindex="0"><a href="/#/detail/${data.id}">${data.name}</a></p>
+                <p class="card__name__title" tabindex="0"><a href="/#/detail/${data.id}">${data.name}</a></p>
             </div>
             <div class="card__desc__restauran">
                 <p tabindex="0">${sliceTxt(data.description)}</p>

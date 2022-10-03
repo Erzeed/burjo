@@ -17,12 +17,12 @@ const home = {
         `;
   },
   async afterRender() {
-    const movieList = await dataRestaurant.listRestaurant();
+    const restaurantList = await dataRestaurant.listRestaurant();
     const cardContainer = document.querySelector('.restauran__container');
-    movieList.forEach((movie) => {
-      cardContainer.innerHTML += card(movie);
+    restaurantList.forEach((restaurants) => {
+      cardContainer.innerHTML += card(restaurants);
     });
-    showHideLoading(movieList);
+    showHideLoading(restaurantList);
   },
 };
 

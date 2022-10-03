@@ -9,25 +9,25 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
   },
 });
 
-const FavoriteMovieIdb = {
-  async getMovie(id) {
+const FavoriteRestaurantIdb = {
+  async getRestaurants(id) {
     if (!id) {
       return;
     }
     return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
-  async getAllMovies() {
+  async getAllRestaurants() {
     return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
-  async putMovie(movie) {
-    if (!movie.hasOwnProperty('id')) {
+  async putRestaurants(restaurant) {
+    if (!restaurant.hasOwnProperty('id')) {
       return;
     }
-    return (await dbPromise).put(OBJECT_STORE_NAME, movie);
+    return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
   },
-  async deleteMovie(id) {
+  async deleteRestaurants(id) {
     return (await dbPromise).delete(OBJECT_STORE_NAME, id);
   },
 };
 
-export default FavoriteMovieIdb;
+export default FavoriteRestaurantIdb;
