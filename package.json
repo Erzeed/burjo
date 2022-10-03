@@ -10,6 +10,7 @@
     "build-serve": "yarn run build && yarn run serve",
     "test": "karma start",
     "build-image": "node sharp.js",
+    "build-burjo": "yarn run build && yarn run build-image",
     "e2e": "codeceptjs run --steps"
   },
   "keywords": [],
