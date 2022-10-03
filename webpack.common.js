@@ -6,9 +6,6 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-// const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
-// const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
-// const ImageminMozjpeg = require('imagemin-mozjpeg');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -17,7 +14,6 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 module.exports = {
   entry: {
     app: path.resolve(__dirname, './src/app.js'),
-    // sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -111,25 +107,6 @@ module.exports = {
         },
       ],
     }),
-    // new ImageminWebpackPlugin({
-    //   plugins: [
-    //     ImageminMozjpeg({
-    //       quality: 80,
-    //       progressive: true,
-    //     }),
-    //   ],
-    // }),
-    // new ImageminWebpWebpackPlugin({
-    //   config: [
-    //     {
-    //       test: /\.(jpe?g|png)/,
-    //       options: {
-    //         quality: 80,
-    //       },
-    //     },
-    //   ],
-    //   overrideExtension: true,
-    // }),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -150,6 +127,6 @@ module.exports = {
           filename: '[name].css',
         }),
     new CleanWebpackPlugin(),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
 };
