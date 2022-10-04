@@ -5,7 +5,7 @@
 nav {
     width: 100%;
     display: flex;
-    height: 65px;
+    height: 60px;
     box-shadow: 5px 5px 15px  rgba(0, 0, 0, .1);
     align-items: center;
     justify-content: space-between;
@@ -30,11 +30,13 @@ nav {
     display: none;
     width: 44px;
     height: 44px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .3);
   }
 
   nav > button > img {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 60%;
     object-fit: cover;
   }
   
@@ -45,7 +47,7 @@ nav {
   }
   
   nav > .nav__logo > img {
-    width: 90px;
+    width: 80px;
     height: 100%;
     padding-top: 5px;
     object-fit: cover;
@@ -94,7 +96,6 @@ nav {
     }
     nav > button {
         display: block;
-        border: none;
         background-color: transparent;
         right: 20px;
         position: absolute;

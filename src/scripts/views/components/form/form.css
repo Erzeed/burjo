@@ -20,6 +20,10 @@
     padding: 15px;
 }
 
+.review__form__content > #txt___name {
+    min-height: 45px !important;
+}
+
 .review__form__content > #txt___area,
 .review__form__content > #txt___name {
     width: 100%;

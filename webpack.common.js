@@ -9,7 +9,6 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-// const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -118,10 +117,6 @@ module.exports = {
         },
       ],
     }),
-    // new WorkboxWebpackPlugin.InjectManifest({
-    //   swSrc: path.resolve(__dirname, 'src/scripts/sw.js'),
-    //   swDest: './sw.bundle.js',
-    // }),
     new MiniCssExtractPlugin(
         {
           filename: '[name].css',
