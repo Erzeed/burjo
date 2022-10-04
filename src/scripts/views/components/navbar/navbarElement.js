@@ -1,7 +1,7 @@
 import logo from '../../../../public/images/logo.png';
 
 const navbarElement = () => {
-  const urlLogo = 'https://img.icons8.com/external-febrian-hidayat-glyph-febrian-hidayat/24/000000/external-burger-bar-ui-essential-febrian-hidayat-glyph-febrian-hidayat.png';
+  const urlLogo = 'https://img.icons8.com/android/48/000000/menu.png';
 
   return `
     <nav>

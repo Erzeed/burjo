@@ -1,5 +1,5 @@
-const openBarUrl = 'https://img.icons8.com/external-febrian-hidayat-glyph-febrian-hidayat/24/000000/external-burger-bar-ui-essential-febrian-hidayat-glyph-febrian-hidayat.png';
-const closeBarUrl = 'https://img.icons8.com/material-outlined/24/000000/delete-sign.png';
+const openBarUrl = 'https://img.icons8.com/android/48/000000/menu.png';
+const closeBarUrl = 'https://img.icons8.com/ios/50/000000/delete-sign--v2.png';
 
 const DrawerInitiator = {
   init({button, drawer, content, iconBar}) {
